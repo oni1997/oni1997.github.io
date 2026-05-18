@@ -15,9 +15,9 @@ const modules: Module[] = [
     description: "AWS Lambda, containerized workloads, cloud hosting environments.",
     accent: "green",
     items: [
-      "AWS Lambda — serverless compute",
-      "Docker / Kubernetes — container orchestration",
-      "Cloud hosting — multi-environment deployments",
+      "AWS Lambda - serverless compute",
+      "Docker / Kubernetes - container orchestration",
+      "Cloud hosting - multi-environment deployments",
     ],
   },
   {
@@ -25,29 +25,29 @@ const modules: Module[] = [
     description: "CI/CD pipelines, deployment automation, infrastructure troubleshooting.",
     accent: "blue",
     items: [
-      "CI/CD pipelines — automated build & deploy",
-      "Deployment automation — zero-downtime releases",
-      "Infrastructure troubleshooting — root cause analysis",
+      "CI/CD pipelines - automated build & deploy",
+      "Deployment automation - zero-downtime releases",
+      "Infrastructure troubleshooting - root cause analysis",
     ],
   },
   {
     title: "Backend Systems Module",
-    description: "Golang, Python, Node.js, Java — REST, GraphQL, integration systems.",
+    description: "Golang, Python, Node.js, Java - REST, GraphQL, integration systems.",
     accent: "amber",
     items: [
-      "Golang / Python / Node.js / Java — polyglot engineering",
-      "REST / GraphQL APIs — service interfaces",
-      "Integration systems — cross-platform connectivity",
+      "Golang / Python / Node.js / Java - polyglot engineering",
+      "REST / GraphQL APIs - service interfaces",
+      "Integration systems - cross-platform connectivity",
     ],
   },
   {
     title: "Data Systems Module",
-    description: "PostgreSQL, MySQL, MongoDB — performance tuning, data pipelines.",
+    description: "PostgreSQL, MySQL, MongoDB - performance tuning, data pipelines.",
     accent: "blue",
     items: [
-      "PostgreSQL / MySQL / MongoDB — relational & document stores",
-      "Performance tuning — query optimization, indexing",
-      "Data pipelines — ETL, streaming, batch processing",
+      "PostgreSQL / MySQL / MongoDB - relational & document stores",
+      "Performance tuning - query optimization, indexing",
+      "Data pipelines - ETL, streaming, batch processing",
     ],
   },
   {
@@ -55,9 +55,9 @@ const modules: Module[] = [
     description: "PCI DSS environments, OAuth2, JWT, secure system design.",
     accent: "green",
     items: [
-      "PCI DSS — compliant payment environments",
-      "OAuth2 / JWT — authentication & authorization",
-      "Secure system design — defense in depth",
+      "PCI DSS - compliant payment environments",
+      "OAuth2 / JWT - authentication & authorization",
+      "Secure system design - defense in depth",
     ],
   },
   {
@@ -65,9 +65,9 @@ const modules: Module[] = [
     description: "Incident response, RCA, monitoring dashboards, alerting.",
     accent: "amber",
     items: [
-      "Incident response — real-time production triage",
-      "Root Cause Analysis — systematic failure investigation",
-      "Monitoring dashboards — metrics, logs, traces",
+      "Incident response - real-time production triage",
+      "Root Cause Analysis - systematic failure investigation",
+      "Monitoring dashboards - metrics, logs, traces",
     ],
   },
   {
@@ -140,7 +140,7 @@ export default function Capabilities() {
           </h2>
 
           <p className="text-text-secondary text-base mb-12 max-w-2xl leading-relaxed">
-            Each capability is a production-tested system module—battle-hardened across
+            Each capability is a production-tested system module-battle-hardened across
             fintech and telecom environments handling real traffic and real failures.
           </p>
 

@@ -11,22 +11,22 @@ const principles = [
   {
     statement: "Observability is not optional.",
     detail:
-      "You cannot fix what you cannot see. Metrics, logs, and traces are not luxuries—they are the control panels of production systems. If it isn't observable, it isn't ready for production.",
+      "You can’t fix something you can’t observe. Just like you need to have metrics, logs, and traces in order to maintain a production system, you also need to be able to see everything in order to determine if it is ready for production. If something is not observable, then it’s not yet appropriate for production.",
   },
   {
     statement: "Complexity must be controlled, not eliminated blindly.",
     detail:
-      "Distributed systems are inherently complex. The goal is not zero complexity but managed complexity—clear boundaries, well-defined interfaces, and deliberate trade-offs.",
+      "Managed complexity is the goal of a distributed system; the distributed system will never be zero complexity, however, it will have clear boundaries, explicitly defined interfaces, and where you have made deliberate trade-offs.",
   },
   {
     statement: "Production is the only real environment.",
     detail:
-      "Staging and development are useful approximations, but production is where the actual system behavior emerges. Real load, real data, real failure modes. Design for production first.",
+      "Development & staging are approximations of what production is going to be like. Production is where your system will behave in the way you expect based on real load, real data & real failures. You should design your system with production in mind.",
   },
   {
     statement: "Reliability is a feature, not an afterthought.",
     detail:
-      "Every architectural decision has reliability implications. Redundancy, retry logic, circuit breakers, and backpressure are not optional add-ons—they are core design requirements.",
+      "Every architectural decision has implications for reliability. Adding redundancy, retry strategy, circuit breaker, back pressure, etc. are not optional 'add-ons' they are part of the core design requirements.",
   },
 ];
 

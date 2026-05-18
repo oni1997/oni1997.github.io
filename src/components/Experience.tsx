@@ -12,7 +12,7 @@ interface Role {
 
 const roles: Role[] = [
   {
-    period: "Jan 2025 — Present",
+    period: "Jan 2025 - Present",
     title: "Intermediate Software Engineer",
     organization: "APS Holdings",
     accent: "green",

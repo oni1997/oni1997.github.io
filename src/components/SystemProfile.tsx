@@ -49,13 +49,13 @@ export default function SystemProfile() {
           <div className="grid lg:grid-cols-2 gap-8">
             <div className="space-y-6">
               <p className="text-text-secondary leading-relaxed text-base">
-                I operate in live production environments—not isolated development sandboxes.
+                I operate in live production environments not isolated development sandboxes.
                 My work centers on maintaining reliability, observability, and fault handling
                 across distributed systems that process hundreds of thousands of transactions daily.
               </p>
               <p className="text-text-secondary leading-relaxed text-base">
                 I specialize in stabilizing real-world systems under load, managing cross-organization
-                integrations, and ensuring that every component—from API gateways to database clusters—
+                integrations, and ensuring that every component from API gateways to database clusters
                 performs predictably at scale.
               </p>
               <p className="text-text-secondary leading-relaxed text-base">
