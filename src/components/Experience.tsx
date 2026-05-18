@@ -8,14 +8,16 @@ interface Role {
   organization: string;
   highlights: string[];
   accent: "green" | "blue" | "amber";
+  promoted?: boolean;
 }
 
 const roles: Role[] = [
   {
-    period: "Jan 2025 - Present",
+    period: "Jan 2024 – Present",
     title: "Intermediate Software Engineer",
     organization: "APS Holdings",
     accent: "green",
+    promoted: true,
     highlights: [
       "Supported and maintained cloud-based payment and integration platforms at production scale",
       "Second-line incident response: investigating failed transactions, degraded integrations, and performance issues",
@@ -120,46 +122,69 @@ export default function Experience() {
           <div className="relative">
             <div className="absolute left-[7px] top-3 bottom-3 w-px bg-border hidden md:block" />
 
-            <div className="space-y-8">
-              {roles.map((role, i) => (
-                <div
-                  key={role.period}
-                  className={`relative pl-0 md:pl-8 transition-all duration-700 delay-${i * 150} ${
-                    visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                  }`}
-                >
-                  <div className={`hidden md:block absolute left-0 top-2 w-[15px] h-[15px] rounded-full ${accentDot(role.accent)}`} />
-
-                  <div className={`glass-panel rounded-sm p-6 border-l-2 experience-card ${accentBorder(role.accent)}`}>
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-4">
-                      <div>
-                        <span className={`text-xs font-mono tracking-widest uppercase ${
-                          role.accent === "green" ? "text-green" : role.accent === "blue" ? "text-blue" : "text-amber"
-                        }`}>
-                          {role.period}
-                        </span>
-                        <h3 className="text-lg font-medium text-text-primary mt-1">
-                          {role.title}
-                        </h3>
-                        <p className="text-sm text-text-tertiary font-mono">
-                          {role.organization}
-                        </p>
-                      </div>
+            <div className="space-y-2">
+              {roles.map((role, i) => {
+                const prevSameOrg = i > 0 && roles[i - 1].organization === role.organization;
+                return (
+                  <div
+                    key={role.period + role.title}
+                    className={`relative pl-0 md:pl-8 transition-all duration-700 delay-${i * 150} ${
+                      visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                    }`}
+                  >
+                    <div className="absolute left-0 top-2 hidden md:flex flex-col items-center">
+                      <div className={`w-[15px] h-[15px] rounded-full ${accentDot(role.accent)}`} />
                     </div>
 
-                    <ul className="space-y-2 pl-0 list-disc list-inside md:list-outside md:pl-5">
-                      {role.highlights.map((h) => (
-                        <li
-                          key={h}
-                          className="text-sm text-text-secondary leading-relaxed"
-                        >
-                          {h}
-                        </li>
-                      ))}
-                    </ul>
+                    {role.promoted && (
+                      <div className="hidden md:flex absolute left-[18px] -top-6 items-center gap-1.5">
+                        <span className="text-[10px] font-mono text-green tracking-wider uppercase">Promoted</span>
+                        <span className="text-green/60 text-xs">&#8593;</span>
+                      </div>
+                    )}
+
+                    <div
+                      className={`glass-panel rounded-sm p-6 border-l-2 experience-card ${
+                        prevSameOrg ? "border-t-0 rounded-t-none" : ""
+                      } ${accentBorder(role.accent)}`}
+                    >
+                      {prevSameOrg && (
+                        <div className="flex items-center gap-2 mb-3 -mt-1">
+                          <div className="h-px flex-1 bg-border/50" />
+                          <span className="text-[10px] font-mono text-text-tertiary tracking-wider uppercase">Same company</span>
+                          <div className="h-px flex-1 bg-border/50" />
+                        </div>
+                      )}
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-4">
+                        <div>
+                          <span className={`text-xs font-mono tracking-widest uppercase ${
+                            role.accent === "green" ? "text-green" : role.accent === "blue" ? "text-blue" : "text-amber"
+                          }`}>
+                            {role.period}
+                          </span>
+                          <h3 className="text-lg font-medium text-text-primary mt-1">
+                            {role.title}
+                          </h3>
+                          <p className="text-sm text-text-tertiary font-mono">
+                            {role.organization}
+                          </p>
+                        </div>
+                      </div>
+
+                      <ul className="space-y-2 pl-0 list-disc list-inside md:list-outside md:pl-5">
+                        {role.highlights.map((h) => (
+                          <li
+                            key={h}
+                            className="text-sm text-text-secondary leading-relaxed"
+                          >
+                            {h}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
