@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import SystemProfile from "@/components/SystemProfile";
+import Tooling from "@/components/Tooling";
 import Capabilities from "@/components/Capabilities";
 import Experience from "@/components/Experience";
 import Philosophy from "@/components/Philosophy";
@@ -14,6 +15,7 @@ export default function Home() {
       <div className="relative z-10">
         <Hero />
         <SystemProfile />
+        <Tooling />
         <Capabilities />
         <Experience />
         <Philosophy />
